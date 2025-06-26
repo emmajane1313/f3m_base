@@ -48,6 +48,7 @@ export default function Home() {
             <video
               draggable={false}
               autoPlay
+              poster="/images/f3m.png"
               loop
               ref={videoRef}
               muted
