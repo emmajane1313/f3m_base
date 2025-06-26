@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://emmajanemackinnonlee-f3manifesto.com/sitemap.xml

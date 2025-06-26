@@ -1,103 +1,103 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [time, setTime] = useState<string>("00:00");
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const updateClock = () => {
+      const t = Math.floor(video.currentTime);
+      const minutes = String(Math.floor(t / 60)).padStart(2, "0");
+      const seconds = String(t % 60).padStart(2, "0");
+      setTime(`${minutes}:${seconds}`);
+    };
+
+    const interval = setInterval(updateClock, 500);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative w-full min-h-screen flex items-center flex-col justify-between p-4 selection:bg-offBlue selection:text-lightYellow">
+      <div className="relative w-full h-fit items-center justify-center sm:justify-between gap-3 flex flex-row text-xl font-york flex-wrap text-center">
+        <div
+          className="relative w-fit h-fit flex cursor-empireS"
+          onClick={() => window.open("https://f3manifesto.xyz/")}
+        >
+          F3Manifesto
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div className="relative w-fit h-fit flex">& The Machines</div>
+      </div>
+
+      <div className="relative w-full h-fit flex flex-col app:flex-row justify-between items-center sm:gap-0 gap-5">
+        <div className="relative w-full h-fit items-center flex gap-1 font-firaB text-xs justify-start app:justify-center">
+          <div className="relative w-fit h-fit flex flex-col text-left">
+            <div className="relative w-fit h-fit flex">100% CC0</div>
+            <div className="relative w-fit h-fit flex">100% On-Chain</div>
+          </div>
+        </div>
+        <div className="relative w-full h-fit flex flex-col items-center justify-center">
+          <div className="font-air text-sm w-fit h-fit relative text-center">
+            I WANT MY WEB3 FASHION
+          </div>
+          <div className="relative w-fit h-fit flex">
+            <video
+              draggable={false}
+              autoPlay
+              loop
+              ref={videoRef}
+              muted
+              className="relative flex w-60 h-60 border border-offBlue object-cover"
+            >
+              <source src="/videos/f3m.mp4" />
+            </video>
+          </div>
+          <div className="font-air text-sm w-fit h-fit relative text-center">
+            EST. 2021
+          </div>
+        </div>
+        <div
+          className="relative h-full flex flex-col gap-1 w-full font-din text-sm items-end justify-end"
+          id="coined"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <div className="relative font-firaB">{time}</div>
+          <div
+            className="relative w-fit h-full flex cursor-empireS"
+            onClick={() =>
+              window.open("https://cypher.digitalax.xyz/autograph/f3manifesto")
+            }
+          >
+            Follow on Lens.
+          </div>
+          <div
+            className="relative w-fit h-full flex cursor-empireS"
+            onClick={() => window.open("https://icoinedweb3fashion.com")}
+          >
+            I Coined Web3 Fashion.
+          </div>
+        </div>
+      </div>
+
+      <div className="relative w-full h-fit items-center sm:items-end justify-center sm:justify-between gap-3 flex flex-col sm:flex-row font-york">
+        <div className="font-din text-base w-fit sm:w-40 h-fit text-center sm:text-left">
+          Cotton warp, varieties of weft, shuttles, tapestry needle, comb, shed.
+        </div>
+        <div className="relative text-center sm:text-right flex h-fit text-xs font-din w-fit sm:w-44 flex-col items-center justify-center sm:items-end sm:justify-end">
+          <div className="relative w-fit h-fit flex">
+            stacking looks and skills. sewing together more useful stuff.
+          </div>
+          <h1
+            className="relative w-fit h-fit flex underline cursor-empireS"
+            onClick={() => window.open("https://emmajanemackinnonlee.com/")}
+          >
+            by Emma-Jane MacKinon-Lee
+          </h1>
+        </div>
+      </div>
     </div>
   );
 }
