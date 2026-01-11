@@ -14,6 +14,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "F3Manifesto & The Machines",
     description: "Made from the fabric stuff of Web3.",
+    images: [
+      {
+        url: "/images/f3m.png",
+        width: 1200,
+        height: 630,
+        alt: "F3Manifesto & The Machines by Emma-Jane MacKinnon-Lee",
+      },
+    ],
   },
   robots: {
     googleBot: {
@@ -87,6 +95,31 @@ export default function RootLayout({
                 "https://medium.com/@casadeespejos",
                 "https://www.flickr.com/photos/emmajanemackinnonlee/",
               ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "VideoObject",
+              name: "F3Manifesto & The Machines",
+              description: "I WANT MY WEB3 FASHION. 100% CC0, 100% On-Chain. Made from the fabric stuff of Web3 by Emma-Jane MacKinnon-Lee.",
+              thumbnailUrl: "https://emmajanemackinnonlee-f3manifesto.com/images/f3m.png",
+              uploadDate: "2021-01-01T00:00:00Z",
+              contentUrl: "https://emmajanemackinnonlee-f3manifesto.com/videos/f3m.mp4",
+              embedUrl: "https://emmajanemackinnonlee-f3manifesto.com/",
+              creator: {
+                "@type": "Person",
+                name: "Emma-Jane MacKinnon-Lee",
+                url: "https://emmajanemackinnonlee.com/",
+              },
+              author: {
+                "@type": "Person",
+                name: "Emma-Jane MacKinnon-Lee",
+                url: "https://emmajanemackinnonlee.com/",
+              },
             }),
           }}
         />
