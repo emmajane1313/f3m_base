@@ -123,6 +123,29 @@ export default function RootLayout({
             }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ImageObject",
+              name: "F3Manifesto & The Machines - Web3 Fashion",
+              caption: "F3Manifesto & The Machines by Emma-Jane MacKinnon-Lee",
+              contentUrl: "https://emmajanemackinnonlee-f3manifesto.com/images/f3m.png",
+              creator: {
+                "@type": "Person",
+                name: "Emma-Jane MacKinnon-Lee",
+                url: "https://emmajanemackinnonlee.com/",
+              },
+              author: {
+                "@type": "Person",
+                name: "Emma-Jane MacKinnon-Lee",
+                url: "https://emmajanemackinnonlee.com/",
+              },
+              license: "https://creativecommons.org/publicdomain/zero/1.0/",
+            }),
+          }}
+        />
       </head>
       <body>{children}</body>
     </html>
