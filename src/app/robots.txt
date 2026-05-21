@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://emmajanemackinnonlee-f3manifesto.com/sitemap.xml
+Sitemap: https://f3m.emmajanemackinnonlee-celtic.com/sitemap.xml

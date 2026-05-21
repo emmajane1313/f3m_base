@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "F3Manifesto & The Machines",
   description: "Made from the fabric stuff of Web3.",
-  metadataBase: new URL("https://emmajanemackinnonlee-f3manifesto.com/"),
+  metadataBase: new URL("https://f3m.emmajanemackinnonlee-celtic.com/"),
   twitter: {
     card: "summary_large_image",
     creator: "@emmajane1313",
@@ -75,7 +75,7 @@ export default function RootLayout({
                 "https://emmajanemackinnonlee.net/",
                 "https://emmajanemackinnonlee.ai/",
                 "https://emmajanemackinnonlee.org/",
-                "https://emmajanemackinnonlee-f3manifesto.com/",
+                "https://f3m.emmajanemackinnonlee-celtic.com/",
                 "https://emmajanemackinnonlee-digitalax.com/",
                 "https://icoinedweb3fashion.com/",
                 "https://syntheticfutures.xyz/",
@@ -106,10 +106,10 @@ export default function RootLayout({
               "@type": "VideoObject",
               name: "F3Manifesto & The Machines",
               description: "I WANT MY WEB3 FASHION. 100% CC0, 100% On-Chain. Made from the fabric stuff of Web3 by Emma-Jane MacKinnon-Lee.",
-              thumbnailUrl: "https://emmajanemackinnonlee-f3manifesto.com/images/f3m.png",
+              thumbnailUrl: "https://f3m.emmajanemackinnonlee-celtic.com/images/f3m.png",
               uploadDate: "2021-01-01T00:00:00Z",
-              contentUrl: "https://emmajanemackinnonlee-f3manifesto.com/videos/f3m.mp4",
-              embedUrl: "https://emmajanemackinnonlee-f3manifesto.com/",
+              contentUrl: "https://f3m.emmajanemackinnonlee-celtic.com/videos/f3m.mp4",
+              embedUrl: "https://f3m.emmajanemackinnonlee-celtic.com/",
               creator: {
                 "@type": "Person",
                 name: "Emma-Jane MacKinnon-Lee",
@@ -131,7 +131,7 @@ export default function RootLayout({
               "@type": "ImageObject",
               name: "F3Manifesto & The Machines - Web3 Fashion",
               caption: "F3Manifesto & The Machines by Emma-Jane MacKinnon-Lee",
-              contentUrl: "https://emmajanemackinnonlee-f3manifesto.com/images/f3m.png",
+              contentUrl: "https://f3m.emmajanemackinnonlee-celtic.com/images/f3m.png",
               creator: {
                 "@type": "Person",
                 name: "Emma-Jane MacKinnon-Lee",
@@ -145,7 +145,7 @@ export default function RootLayout({
               license: "https://creativecommons.org/publicdomain/zero/1.0/",
             }),
           }}
-        />
+        /> <meta name="msvalidate.01" content="984582FAF285279CCF4EF875FB8ADAB9" />
       </head>
       <body>{children}</body>
     </html>

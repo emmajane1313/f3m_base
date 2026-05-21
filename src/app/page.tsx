@@ -4,11 +4,11 @@ import HomeClient from "@/modules/HomeClient";
 export const metadata: Metadata = {
   title: "F3Manifesto & The Machines | Emma-Jane MacKinnon-Lee",
   description: "100% CC0, 100% On-Chain. I WANT MY WEB3 FASHION. Cotton warp, varieties of weft, shuttles, tapestry needle, comb, shed. Stacking looks and skills, sewing together more useful stuff by Emma-Jane MacKinnon-Lee. Est. 2021.",
-  metadataBase: new URL("https://emmajanemackinnonlee-f3manifesto.com/"),
+  metadataBase: new URL("https://f3m.emmajanemackinnonlee-celtic.com/"),
   openGraph: {
     title: "F3Manifesto & The Machines | Emma-Jane MacKinnon-Lee",
     description: "100% CC0, 100% On-Chain. I WANT MY WEB3 FASHION. Made from the fabric stuff of Web3 by Emma-Jane MacKinnon-Lee.",
-    url: "https://emmajanemackinnonlee-f3manifesto.com/",
+    url: "https://f3m.emmajanemackinnonlee-celtic.com/",
     siteName: "F3Manifesto & The Machines",
     images: [
       {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     "I Coined Web3 Fashion",
   ],
   alternates: {
-    canonical: "https://emmajanemackinnonlee-f3manifesto.com/",
+    canonical: "https://f3m.emmajanemackinnonlee-celtic.com/",
   },
 };
 
