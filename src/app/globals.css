@@ -35,9 +35,9 @@
 
   --breakpoint-app: 900px;
 
-  --cursor-empireA: url("https://thedial.infura-ipfs.io/ipfs/QmY5HoV5TDahoAjutA18XctiTE79NDtU9BDjGbadvf6Nmt"),
+  --cursor-empireA: url("https://cdn.digitalax.xyz/ipfs/QmY5HoV5TDahoAjutA18XctiTE79NDtU9BDjGbadvf6Nmt"),
     auto;
-  --cursor-empireS: url("https://thedial.infura-ipfs.io/ipfs/Qmchgr77mEfYEKEzHWDRdEjke44JAwDVmUftUwoppECw71"),
+  --cursor-empireS: url("https://cdn.digitalax.xyz/ipfs/Qmchgr77mEfYEKEzHWDRdEjke44JAwDVmUftUwoppECw71"),
     auto;
 }
 
